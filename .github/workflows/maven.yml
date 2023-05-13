@@ -52,5 +52,5 @@ jobs:
     - name: Release
       uses: qcastel/github-actions-maven-release@v1.12.39
       env:
-       JAVA_HOME: /usr/lib/jvm/java-20-openjdk/
+       JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
