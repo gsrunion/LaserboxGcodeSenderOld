@@ -52,5 +52,5 @@ jobs:
     - name: Release
       uses: qcastel/github-actions-maven-release@v1.12.39
       env:
-       #JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
+       JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/20.0.1-9/x64/
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
