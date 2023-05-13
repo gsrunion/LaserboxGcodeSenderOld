@@ -39,3 +39,8 @@ jobs:
       with:
         name: LaserBoxGCodeSender-${{ github.run_attempt }}.jar
         path: staging
+        
+    - name: Release
+      uses: qcastel/github-actions-maven-release@v1.12.39
+      env:
+       JAVA_HOME: /usr/lib/jvm/java-20-openjdk/
