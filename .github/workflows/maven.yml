@@ -27,6 +27,7 @@ jobs:
         java-version: '20'
         distribution: 'temurin'
         cache: maven
+        server-id: github
         
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots verify
@@ -40,7 +41,16 @@ jobs:
         name: LaserBoxGCodeSender-${{ github.run_attempt }}.jar
         path: staging
         
+    - name: View settings.xml
+      run: cat /home/runner/.m2/settings.xml
+      
+    - name: Configure Git user
+      run: |
+        git config user.email "actions@github.com"
+        git config user.name "GitHub Actions"
+        
     - name: Release
       uses: qcastel/github-actions-maven-release@v1.12.39
       env:
        JAVA_HOME: /usr/lib/jvm/java-20-openjdk/
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
