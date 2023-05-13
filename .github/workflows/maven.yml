@@ -39,9 +39,3 @@ jobs:
       with:
         name: LaserBoxGCodeSender-${{ github.run_attempt }}.jar
         path: staging
-        
-    - name: Publish JAR
-      run: ./mvnw -B release:prepare release:perform
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
