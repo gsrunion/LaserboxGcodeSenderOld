@@ -31,9 +31,3 @@ jobs:
         
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      
-    - name: Persist workflow data as artificats
-      uses: actions/upload-artifact@v2
-      with:
-          name: github-actions-artifact
-          path: staging
