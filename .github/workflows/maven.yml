@@ -49,8 +49,7 @@ jobs:
         git config user.email "actions@github.com"
         git config user.name "GitHub Actions"
         
-    - name: Release
-      uses: qcastel/github-actions-maven-release@v1.12.39
+    - name: Publish JAR
+      run: ./mvnw -B release:prepare release:perform
       env:
-       JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64/
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
