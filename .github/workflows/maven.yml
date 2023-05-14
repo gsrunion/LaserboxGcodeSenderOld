@@ -24,7 +24,7 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: '20'
+        java-version: '17'
         distribution: 'temurin'
         cache: maven
         server-id: github
@@ -52,5 +52,5 @@ jobs:
     - name: Release
       uses: qcastel/github-actions-maven-release@v1.12.39
       env:
-       JAVA_HOME: /usr/lib/jvm/temurin-20-jdk-amd64/
+       JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64/
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
