@@ -11,13 +11,13 @@
 	</parent>
 	<groupId>com.runion</groupId>
 	<artifactId>LaserboxGcodeSender</artifactId>
-	<version>0.0.8</version>
+	<version>0.0.9-SNAPSHOT</version>
 	<name>LaserboxGcodeSender</name>
 	<description>Demo project for Spring Boot</description>
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/gsrunion/LaserboxGcodeSender.git</developerConnection>
-	  <tag>LaserboxGcodeSender-0.0.8</tag>
+	  <tag>HEAD</tag>
     </scm>
 
 	<repositories>
