@@ -42,15 +42,24 @@ jobs:
 #        name: LaserBoxGCodeSender-${{ github.run_attempt }}.jar
 #        path: staging
 
-    - name: View settings.xml
-      run: cat /home/runner/.m2/settings.xml
+#    - name: View settings.xml
+#      run: cat /home/runner/.m2/settings.xml
+#
+#    - name: Configure Git user
+#      run: |
+#        git config user.email "actions@github.com"
+#        git config user.name "GitHub Actions"
+#
+#    - name: Publish JAR
+#      run: ./mvnw -B release:prepare release:perform -Darguments="-Dmaven.deploy.skip=true"
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Configure Git user
       run: |
         git config user.email "actions@github.com"
         git config user.name "GitHub Actions"
-
     - name: Publish JAR
-      run: ./mvnw -B release:prepare release:perform -Darguments="-Dmaven.deploy.skip=true"
+      run: ./mvnw -B release:prepare release:perform
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
