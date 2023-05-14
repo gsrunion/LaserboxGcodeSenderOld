@@ -49,6 +49,6 @@ jobs:
         git config --global user.name "gsrunion"
         git config --global user.email "gsrunion@gmail.com"
         mvn release:prepare --batch-mode 
-        mvn release:perform -s $GITHUB_WORKSPACE/settings.xml
+        mvn release:perform -s /home/runner/.m2/settings.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
