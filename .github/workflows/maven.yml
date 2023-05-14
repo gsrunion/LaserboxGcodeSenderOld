@@ -40,15 +40,3 @@ jobs:
       with:
         name: LaserBoxGCodeSender-${{ github.run_attempt }}.jar
         path: staging
-        
-    - name: View settings.xml
-      run: cat /home/runner/.m2/settings.xml && env | grep JAVA_HOME
-      
-    - name: Maven Release x GitHub Packages
-      run: |
-        git config --global user.name "gsrunion"
-        git config --global user.email "gsrunion@gmail.com"
-        mvn release:prepare --batch-mode 
-        mvn release:perform -s /home/runner/.m2/settings.xml
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
