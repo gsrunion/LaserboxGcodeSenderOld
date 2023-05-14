@@ -44,12 +44,11 @@ jobs:
     - name: View settings.xml
       run: cat /home/runner/.m2/settings.xml && env | grep JAVA_HOME
       
-    - name: Configure Git user
+    - name: Maven Release x GitHub Packages
       run: |
-        git config user.email "actions@github.com"
-        git config user.name "GitHub Actions"
-        
-    - name: Publish JAR
-      run: ./mvnw -B release:prepare release:perform
+        git config --global user.name "gsrunion"
+        git config --global user.email "gsrunion@gmail.com"
+        mvn release:prepare --batch-mode 
+        mvn release:perform -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
