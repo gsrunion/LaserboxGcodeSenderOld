@@ -73,7 +73,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub</name>
-			<url>https://maven.pkg.github.com/gsrunion/laserbox-gcode-sender</url>
+			<url>https://maven.pkg.github.com/gsrunion/LaserboxGcodeSender</url>
 		</repository>
 	</distributionManagement>
 
