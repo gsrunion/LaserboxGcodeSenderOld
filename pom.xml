@@ -69,12 +69,12 @@
 		</plugins>
 	</build>
 
-<!--	<distributionManagement>-->
-<!--		<repository>-->
-<!--			<id>github</id>-->
-<!--			<name>GitHub</name>-->
-<!--			<url>https://maven.pkg.github.com/ajavageek/renamer-swing</url>-->
-<!--		</repository>-->
-<!--	</distributionManagement>-->
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub</name>
+			<url>https://maven.pkg.github.com/gsrunion/laserbox-gcode-sender</url>
+		</repository>
+	</distributionManagement>
 
 </project>
