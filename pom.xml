@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.runion</groupId>
 	<artifactId>LaserboxGcodeSender</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11-SNAPSHOT</version>
 	<name>LaserboxGcodeSender</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -87,7 +87,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/${git.repository}.git</developerConnection>
-	  <tag>v0.0.10</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<distributionManagement>
 		<repository>
